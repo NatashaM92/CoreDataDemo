@@ -6,13 +6,11 @@
 //
 
 import UIKit
-import CoreData
 
 class TaskViewController: UIViewController {
     
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-    
+    private let context = StorageManager.shared.persistentContainer.viewContext
+        
     private lazy var taskTextField: UITextField = {
         let textField = UITextField()
         
